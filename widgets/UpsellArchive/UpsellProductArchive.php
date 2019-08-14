@@ -8,7 +8,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'CustomProductArchive', 'plugin-name' );
+		return __( 'CustomProductArchive', 'elementor-lightx-widgets' );
 	}
 
 	public function get_icon() {
@@ -16,14 +16,14 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'general' ];
+		return [ 'elementor-lightx-widgets-category' ];
 	}
 
 	protected function _register_controls() {
 		$this->start_controls_section(
 			'contents',
 			[
-				'label' => __( 'תכנים', 'plugin-name' ),
+				'label' => __( 'תכנים', 'elementor-lightx-widgets' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -31,7 +31,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 		$this->add_control(
 			'product_tag',
 			[
-				'label' => __( 'טאג מוצר', 'plugin-name' ),
+				'label' => __( 'טאג מוצר', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => 'upsell',
 			]
@@ -40,7 +40,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 		$this->add_control(
 			'products_list-columns',
 			[
-				'label' => __( 'עמודות', 'plugin-name' ),
+				'label' => __( 'עמודות', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'default' => 4,
 			]
@@ -49,7 +49,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 		$this->add_control(
 			'image_url',
 			[
-				'label' => __( 'אייקון טעינה', 'plugin-name' ),
+				'label' => __( 'אייקון טעינה', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::URL,
 				'default' => [
 					'url' => plugins_url( '' , __FILE__ ).'/assets/img/loader.gif',
@@ -64,7 +64,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'selectors_product_archive',
 			[
-				'label' => __( 'סלקטורים של ארכיב מוצרים', 'plugin-name' ),
+				'label' => __( 'סלקטורים של ארכיב מוצרים', 'elementor-lightx-widgets' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -72,7 +72,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 		$this->add_control(
 			'product_archive-container',
 			[
-				'label' => __( 'מיכל ארכיב מוצרים', 'plugin-name' ),
+				'label' => __( 'מיכל ארכיב מוצרים', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => '#upsell_product-archive',
 			]
@@ -81,7 +81,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 		// $this->add_control(
 		// 	'products_list-container',
 		// 	[
-		// 		'label' => __( 'מיכל רשימת מוצרים', 'plugin-name' ),
+		// 		'label' => __( 'מיכל רשימת מוצרים', 'elementor-lightx-widgets' ),
 		// 		'type' => \Elementor\Controls_Manager::TEXT,
 		// 		'default' => '.products_list-container',
 		// 	]
@@ -91,7 +91,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 		$this->add_control(
 			'products_list',
 			[
-				'label' => __( 'רשימת מוצרים', 'plugin-name' ),
+				'label' => __( 'רשימת מוצרים', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => '.products_list',
 			]
@@ -100,7 +100,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 		$this->add_control(
 			'products_list-item',
 			[
-				'label' => __( 'פריט ארכיב מוצרים', 'plugin-name' ),
+				'label' => __( 'פריט ארכיב מוצרים', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => '.products_list-item',
 			]
@@ -109,7 +109,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 		$this->add_control(
 			'add_to_cart-button',
 			[
-				'label' => __( 'סלקטור כפתור הוסף לעגלה', 'plugin-name' ),
+				'label' => __( 'סלקטור כפתור הוסף לעגלה', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => '.add_to_cart_button',
 			]
@@ -120,7 +120,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'pagination',
 			[
-				'label' => __( 'סלקטורים של עימוד', 'plugin-name' ),
+				'label' => __( 'סלקטורים של עימוד', 'elementor-lightx-widgets' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -128,7 +128,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 		$this->add_control(
 			'pagination-nav',
 			[
-				'label' => __( 'סלקטור תפריט עימוד', 'plugin-name' ),
+				'label' => __( 'סלקטור תפריט עימוד', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => '.pagination',
 			]
@@ -137,7 +137,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 		$this->add_control(
 			'pagination-scroll',
 			[
-				'label' => __( 'סלקטור כפתור מעבר', 'plugin-name' ),
+				'label' => __( 'סלקטור כפתור מעבר', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => '.pagination-scroll_button',
 			]
@@ -148,7 +148,7 @@ class UpsellProductArchive extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'style_price_section',
 			[
-				'label' => __( 'מחיר', 'plugin-name' ),
+				'label' => __( 'מחיר', 'elementor-lightx-widgets' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);

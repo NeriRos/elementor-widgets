@@ -8,7 +8,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'VariationsChooser', 'plugin-name' );
+		return __( 'VariationsChooser', 'elementor-lightx-widgets' );
 	}
 
 	public function get_icon() {
@@ -16,14 +16,14 @@ class VariationsChooser extends \Elementor\Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'general' ];
+		return [ 'elementor-lightx-widgets-category' ];
 	}
 
 	protected function _register_controls() {
 		$this->start_controls_section(
 			'style_variation_section',
 			[
-				'label' => __( 'וריאציה', 'plugin-name' ),
+				'label' => __( 'וריאציה', 'elementor-lightx-widgets' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -31,19 +31,19 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variations_variation_alignment',
 			[
-				'label' => __( 'מיקום טקסט', 'plugin-name' ),
+				'label' => __( 'מיקום טקסט', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::CHOOSE,
 				'options' => [
 					'right' => [
-						'title' => __( 'ימין', 'plugin-name' ),
+						'title' => __( 'ימין', 'elementor-lightx-widgets' ),
 						'icon' => 'fa fa-align-right',
 					],
 					'center' => [
-						'title' => __( 'מרכז', 'plugin-name' ),
+						'title' => __( 'מרכז', 'elementor-lightx-widgets' ),
 						'icon' => 'fa fa-align-center',
 					],
 					'left' => [
-						'title' => __( 'שמאל', 'plugin-name' ),
+						'title' => __( 'שמאל', 'elementor-lightx-widgets' ),
 						'icon' => 'fa fa-align-left',
 					],
 				],
@@ -54,7 +54,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variations_variation_space',
 			[
-				'label' => __( 'מרווח', 'plugin-name' ),
+				'label' => __( 'מרווח', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -85,7 +85,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'אייקון', 'plugin-name' ),
+				'label' => __( 'אייקון', 'elementor-lightx-widgets' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -93,7 +93,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variation_icon_color',
 			[
-				'label' => __( 'צבע', 'plugin-name' ),
+				'label' => __( 'צבע', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .variation .variation-icon i' => 'color: {{VALUE}}',
@@ -104,7 +104,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variation_icon_size',
 			[
-				'label' => __( 'גודל האייקון', 'plugin-name' ),
+				'label' => __( 'גודל האייקון', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'em', '%' ],
 				'range' => [
@@ -136,7 +136,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variation_icon_icon',
 			[
-				'label' => __( 'אייקון', 'plugin-name' ),
+				'label' => __( 'אייקון', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::ICONS,
 			]
 		);
@@ -146,7 +146,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'style_background_section',
 			[
-				'label' => __( 'רקע', 'plugin-name' ),
+				'label' => __( 'רקע', 'elementor-lightx-widgets' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -154,7 +154,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variation_background_color',
 			[
-				'label' => __( 'צבע', 'plugin-name' ),
+				'label' => __( 'צבע', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .variation .variation-icon' => 'background-color: {{VALUE}}',
@@ -165,7 +165,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variation_background_selected_color',
 			[
-				'label' => __( 'צבע רקע נבחר', 'plugin-name' ),
+				'label' => __( 'צבע רקע נבחר', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .variation.selected .variation-icon' => 'background-color: {{VALUE}}',
@@ -177,7 +177,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variation_background_radius',
 			[
-				'label' => __( 'עיגול דפנות', 'plugin-name' ),
+				'label' => __( 'עיגול דפנות', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'selectors' => [
 					'{{WRAPPER}} .variation .variation-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -188,7 +188,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variation_background_padding',
 			[
-				'label' => __( 'גודל עיגול', 'plugin-name' ),
+				'label' => __( 'גודל עיגול', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'selectors' => [
 					'{{WRAPPER}} .variation .variation-icon' => 'width: {{VALUE}}px; height: {{VALUE}}px',
@@ -201,7 +201,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'style_name_section',
 			[
-				'label' => __( 'שם וריאציה', 'plugin-name' ),
+				'label' => __( 'שם וריאציה', 'elementor-lightx-widgets' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -209,7 +209,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variation_name_color',
 			[
-				'label' => __( 'צבע', 'plugin-name' ),
+				'label' => __( 'צבע', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .variation .variation-name' => 'color: {{VALUE}}',
@@ -220,7 +220,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variation_name_size',
 			[
-				'label' => __( 'גודל', 'plugin-name' ),
+				'label' => __( 'גודל', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'pt', '%' ],
 				'range' => [
@@ -254,7 +254,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'style_price_section',
 			[
-				'label' => __( 'מחיר', 'plugin-name' ),
+				'label' => __( 'מחיר', 'elementor-lightx-widgets' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -262,7 +262,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variation_price_color',
 			[
-				'label' => __( 'צבע', 'plugin-name' ),
+				'label' => __( 'צבע', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .variation .variation-price .amount' => 'color: {{VALUE}}',
@@ -273,7 +273,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variation_price_line_height',
 			[
-				'label' => __( 'גודל שורה (em)', 'plugin-name' ),
+				'label' => __( 'גודל שורה (em)', 'elementor-lightx-widgets' ),
                 'type' => \Elementor\Controls_Manager::NUMBER,
 				'selectors' => [
 					'{{WRAPPER}} .variation .variation-price .amount' => 'line-height: {{VALUE}}',
@@ -287,7 +287,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variation_price_font-weight',
 			[
-				'label' => __( 'עובי פונט', 'plugin-name' ),
+				'label' => __( 'עובי פונט', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'selectors' => [
 					'{{WRAPPER}} .variation .variation-price .amount' => 'font-weight: {{VALUE}}',
@@ -306,7 +306,7 @@ class VariationsChooser extends \Elementor\Widget_Base {
 		$this->add_control(
 			'Variation_price_size',
 			[
-				'label' => __( 'גודל', 'plugin-name' ),
+				'label' => __( 'גודל', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'pt', '%' ],
 				'range' => [

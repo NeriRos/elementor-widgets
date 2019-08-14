@@ -8,7 +8,7 @@ class Responses extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Responses', 'lightx-widget' );
+		return __( 'Responses', elementor-lightx-widgets );
 	}
 
 	public function get_icon() {
@@ -16,14 +16,14 @@ class Responses extends \Elementor\Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'general' ];
+		return [ 'elementor-lightx-widgets-category' ];
 	}
 
 	protected function _register_controls() {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'תגובות', 'lightx-widget' ),
+				'label' => __( 'תגובות', elementor-lightx-widgets ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -31,9 +31,9 @@ class Responses extends \Elementor\Widget_Base {
 		$this->add_control(
 			'responses_amount',
 			[
-				'label' => __( 'כמות תגובות לדף', 'lightx-widget' ),
+				'label' => __( 'כמות תגובות לדף', elementor-lightx-widgets ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
-				'placeholder' => __( 'כמות', 'lightx-widget' ),
+				'placeholder' => __( 'כמות', elementor-lightx-widgets ),
 				'default' => 5,
 			]
 		);
@@ -43,7 +43,7 @@ class Responses extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'עיצוב', 'lightx-widget' ),
+				'label' => __( 'עיצוב', elementor-lightx-widgets ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -52,19 +52,19 @@ class Responses extends \Elementor\Widget_Base {
 		$this->add_control(
 			'responses_text_alignment',
 			[
-				'label' => __( 'מיקום טקסט', 'lightx-widget' ),
+				'label' => __( 'מיקום טקסט', elementor-lightx-widgets ),
 				'type' => \Elementor\Controls_Manager::CHOOSE,
 				'options' => [
 					'right' => [
-						'title' => __( 'ימין', 'lightx-widget' ),
+						'title' => __( 'ימין', elementor-lightx-widgets ),
 						'icon' => 'fa fa-align-right',
 					],
 					'center' => [
-						'title' => __( 'מרכז', 'lightx-widget' ),
+						'title' => __( 'מרכז', elementor-lightx-widgets ),
 						'icon' => 'fa fa-align-center',
 					],
 					'left' => [
-						'title' => __( 'שמאל', 'lightx-widget' ),
+						'title' => __( 'שמאל', elementor-lightx-widgets ),
 						'icon' => 'fa fa-align-left',
 					],
 				],

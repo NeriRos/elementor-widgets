@@ -55,48 +55,6 @@ class Plugin {
     require_once( __DIR__ . '/widgets/Responses.php' );
     require_once( __DIR__ . '/widgets/SignInButton.php' );
   }
-
-  // function __autoload($class)
-  // {
-  //     $parts = explode('\\', $class);
-  //     require end($parts) . '.php';
-  // }
-
-  // public function register_widgets() {
-  //   $dir = __DIR__ . '/widgets/';
-  //   $widgets_files = scandir($dir);
-  //   if($widgets_files)
-  //     foreach ($widgets_files as $key => $value) {
-  //       if($this->endsWith($value, '.php')) {
-  //         // require_once $dir . $value;
-
-  //         $class = 'Widgets\\' . basename($dir . $value, '.php');
-          
-  //         echo "sss" . $class;
-
-  //         new \ElementorLightXWidgets\Widgets\Responses;
-
-  //         // Register Widgets
-  //         \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new $class() );    
-          
-  //         if (class_exists("Widgets\\Responses")) {
-  //           echo "Teettet";
-  //         } else {
-  //           echo "ne class" . $class;
-  //         }
-  //       }
-  //     }
-  // }
- 
-  // function endsWith($haystack, $needle)
-  // {
-  //     $length = strlen($needle);
-  //     if ($length == 0) {
-  //         return false;
-  //     }
-  
-  //     return (substr($haystack, -$length) === $needle);
-  // }
   
   /**
    * Register Widgets
@@ -145,7 +103,22 @@ class Plugin {
 
     // Register widgets
     add_action( 'elementor/widgets/widgets_registered', [ $this, 'register_widgets2' ] );
+
+    // widgets category
+    add_action( 'elementor/elements/categories_registered', [$this, 'add_elementor_widget_categories'], 10, 1 );
   }
+  
+  function add_elementor_widget_categories( $elements_manager ) {
+    $elements_manager->add_category(
+      'elementor-lightx-widgets-category',
+      [
+        'title' => __( 'LightX Widgets', 'elementor-lightx-widgets' ),
+        'icon' => 'fa fa-plug',
+      ]
+    );
+  
+  }
+
 }
 
 

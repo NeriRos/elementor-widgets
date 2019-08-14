@@ -8,7 +8,7 @@ class SignInButton extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'SignInButton', 'plugin-name' );
+		return __( 'SignInButton', 'elementor-lightx-widgets' );
 	}
 
 	public function get_icon() {
@@ -16,14 +16,14 @@ class SignInButton extends \Elementor\Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'general' ];
+		return [ 'elementor-lightx-widgets-category' ];
 	}
 
 	protected function _register_controls() {
 		$this->start_controls_section(
 			'style_variation_section',
 			[
-				'label' => __( 'כפתור', 'plugin-name' ),
+				'label' => __( 'כפתור', 'elementor-lightx-widgets' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -31,7 +31,7 @@ class SignInButton extends \Elementor\Widget_Base {
 		$this->add_control(
 			'signin-page-url',
 			[
-				'label' => __( 'קישור לעמוד התחברות / הרשמה', 'plugin-name' ),
+				'label' => __( 'קישור לעמוד התחברות / הרשמה', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::URL,
 			]
 		);
@@ -39,7 +39,7 @@ class SignInButton extends \Elementor\Widget_Base {
 		$this->add_control(
 			'username-text',
 			[
-				'label' => __( 'טקסט לפני שם המשתמש', 'plugin-name' ),
+				'label' => __( 'טקסט לפני שם המשתמש', 'elementor-lightx-widgets' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
