@@ -1,0 +1,45 @@
+div.variations.custom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+table.variations {
+    display: none;
+}
+
+div.product .elementor-add-to-cart form.variations_form.cart {
+    margin-bottom: 0;
+}
+
+.variation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px 5px 10px;
+    width: 31%;
+}
+
+.variation.selected, .variation.hovered {
+    border-bottom: 5px solid rgb(255, 0, 70);
+}
+
+.variation .variation-icon {
+    width: fit-content;
+    border: 2px solid rgb(255, 0, 70);
+    position: relative;
+}
+
+.variation .variation-icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.variation .variation-price .amount {
+    padding-bottom: 5px;
+    white-space: nowrap;
+}

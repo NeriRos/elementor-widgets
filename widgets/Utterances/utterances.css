@@ -1,0 +1,45 @@
+.utterances {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.utterance {
+    width: 700px;
+    display: inline-block;
+    position: relative;
+}
+.utterances > .utterance:not(:first-child) {
+    margin-top: 20px;
+}
+span.utterance-number {
+    display: inherit;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: 500;
+}
+span.utterance-bookmark {
+    position: absolute;
+    top: 0;
+}
+button.bookmark-button {
+    background-color: transparent;
+    color: black;
+    border: 0;
+    padding: 0;
+    font-size: 12pt;
+}
+button.bookmark-button:hover, 
+button.bookmark-button:active, 
+button.bookmark-button:focus {
+    background-color: unset;
+    outline: unset;
+    color: black;
+}
+.utterance.bookmarked .bookmark-button i {
+    font-weight: 600;
+}
+
+.utterance-text {
+    padding-top: 10px;
+}

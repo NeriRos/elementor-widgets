@@ -1,0 +1,157 @@
+/* archive container */
+    #upsell_product-archive {
+        display: flex;
+        align-items: center;
+        width: inherit;
+    }
+
+/* pagination */
+    /* buttons */
+        .pagination-container {
+            margin-right: -5px;
+        }
+        .pagination {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 5%;
+        }
+        .pagination .pagination-scroll_button {
+            border: 0;
+            background-color: transparent;
+            color: #ff0045;
+            font-size: 28px;
+            padding: 0;
+        }
+        .pagination .pagination-scroll_button:focus, .pagination .pagination-scroll_button:active {
+            outline: 0;
+        }
+        .pagination .pagination-scroll_button[data-scroll="next"] i {
+            vertical-align: bottom;
+        }
+        .pagination .pagination-scroll_button[data-scroll="prev"] i {
+            vertical-align: text-top;
+        }
+        .horizontal_seperator:empty {
+            width: 22px;
+            height: 1px;
+            background-color: #58585a;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+        }
+/* container */
+    #upsell_product-archive .products_list-container {
+        width: inherit;
+        width: 95%;
+    }
+    #upsell_product-archive .products_list-container *:not(i) {
+        font-family: "Assistant-victoria", sans-serif;
+    }
+    /* products list */
+         #upsell_product-archive .products_list {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: stretch;
+            flex-wrap: nowrap;
+            min-height: 175px;
+            overflow-x: hidden;
+            overflow-y: visible;
+            padding: 0;
+            width: inherit;
+        }
+        /* product item */
+            #upsell_product-archive .products_list-item {
+                min-height: 180px;
+                position: relative;
+                border: 1px solid #b7b7b7;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                padding: 0;
+                height: 90%;
+            }
+            #upsell_product-archive .products_list.columns-4 .products_list-item {
+                flex: 1 0 21%;
+                margin-left: 4%;
+            }
+            #upsell_product-archive .products_list.columns-3 .products_list-item {
+                flex: 1 0 29.3%;
+                margin-left: 4%;
+            }
+            #upsell_product-archive .products_list.columns-3 .products_list-item.product_shown:nth-child(3) {
+                flex: 1 0 29.4%;                    
+            }
+            #upsell_product-archive .products_list.columns-2 .products_list-item {
+                flex: 1 0 46%;
+                margin-left: 4%;
+            }
+            #upsell_product-archive .products_list-item.product_shown {
+                position: static;
+            }
+            
+            #upsell_product-archive .products_list-item .product_link {
+                text-align: center;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* button */
+                #upsell_product-archive .products_list-item .add_to_cart_button-container {
+                    position: absolute;
+                    top: -15px;
+                    z-index: 10;
+                }
+                #upsell_product-archive .products_list-item .add_to_cart_button-container .added_to_cart {
+                    display: none; /* link that shows after the item has added to cart */
+                }
+                #upsell_product-archive .products_list-item .add_to_cart_button {
+                    border: 2px solid #ff0046;
+                    border-radius: 50px;
+                    width: 30px;
+                    height: 30px;
+                    position: relative;
+                    background-color: white;
+                    padding: 0;
+                    cursor: pointer;
+                    font-weight: 600;
+                }
+                #upsell_product-archive .products_list-item .add_to_cart_button:hover {
+                    background-color: #ff0046;
+                }
+                #upsell_product-archive .products_list-item .add_to_cart_button:focus,
+                #upsell_product-archive .products_list-item .add_to_cart_button:active {
+                    outline: 0;
+                }
+                #upsell_product-archive .products_list-item .add_to_cart_button i {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin-top: 0.5px;
+                    color: white;
+                }
+            
+            /* image */
+                #upsell_product-archive .products_list-item .product_image {
+                    flex: 2 0 auto;
+                }
+            /* title */
+                #upsell_product-archive .products_list-item .product_title {
+                    font-size: 14px;
+                    text-decoration: none;
+                    color: #58585a;
+                    text-align: center;
+                    font-weight: 600;
+                    margin: 0;
+                    padding-bottom: 5px;
+                }
+            /* price */
+                #upsell_product-archive .products_list-item .product_price .amount {
+                    font-size: 16px;
+                    color: #ff0000;
+                    text-align: center;
+                }
